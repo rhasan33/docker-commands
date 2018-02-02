@@ -1,2 +1,5 @@
-# docker-commands
-Necessary Docker Commands
+# Necessary Docker Commands
+* To get all the docker images list:
+    
+    `docker images`
+
