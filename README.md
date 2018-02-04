@@ -66,6 +66,21 @@
         docker run --rm ubuntu bash -c "sleep 3; echo container killed"
         ```
 
+        To run the container in detouch mode:
+        ```
+        docker run -d --ti ubuntu bash
+        ```
+
+        This will run the container in detouch mode. To get into the container run
+        ```
+        docker attach <container-name>
+        ```
+
+        To create another process in same docker container
+        ```
+        docker exec -ti <container-name> what-you-want-to-do
+        ```
+
         When you go inside of the container you can exit by typing `Ctrl+p` and then `Ctrl+q`. That will detouch you from the container but keep the container alive.
 
 
