@@ -46,6 +46,7 @@
             docker tag <image-id> your-image-name
             ```
     * `Short Step`:
+
         * Get the container ID
             ```
             docker ps -l
@@ -55,6 +56,17 @@
             docker commit <container-id> your-image-name
             ```
 * Processes:
+    * If we want to create a container which we will delete after the process finished:
+        ```
+        docker run --rm ubuntu sleep 5
+        ```
+
+        To make things more understandable
+        ```
+        docker run --rm ubuntu bash -c "sleep 3; echo container killed"
+        ```
+
+        When you go inside of the container you can exit by typing `Ctrl+p` and then `Ctrl+q`. That will detouch you from the container but keep the container alive.
 
 
 ``Notes``:
